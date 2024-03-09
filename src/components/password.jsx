@@ -39,8 +39,14 @@ let PasswordGenerator = () => {
     }
 
     let copyToClipboard = () => {
-        navigator.clipboard.writeText(passwordValue);
-        alert("Password Copied");
+        if(passwordValue == ""){
+            alert("Generate Password First")
+        }
+        else{
+            navigator.clipboard.writeText(passwordValue);
+            alert("Password Copied");
+        }
+        
     }
 
 
